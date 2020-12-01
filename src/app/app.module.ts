@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AcceuilComponent } from './acceuil/acceuil.component';
 import { ListmaterielComponent } from './listmateriel/listmateriel.component';
 import { MaterielComponent } from './materiel/materiel.component';
+import { DetailmaterielComponent } from './detailmateriel/detailmateriel.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MaterielComponent } from './materiel/materiel.component';
     AcceuilComponent,
     ListmaterielComponent,
     MaterielComponent,
+    DetailmaterielComponent,
     
   ],
   imports: [
