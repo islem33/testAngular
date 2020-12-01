@@ -1,17 +1,10 @@
 <h1>nos produits informatiques</h1>
 <ul>
-    <ng-container  *ngFor="let t of materiels ;index as i">
-        <li *ngIf="t.qtn!=0">
-            <img src="{{t.image}}">
-            {{t.nom}}
-            <span [ngClass]="{'badge badge-primary ':materiels[i].hautegamme==true,
-            'badge badge-dark':materiels[i].hautegamme==false,
-            'badge-pill':materiels[i].hautegamme==true||materiels[i].hautegamme==false}">
-                {{t.prix}}
-            <p [ngClass]="{' fa fa-thumbs-up de font-awesome':materiels[i].hautegamme==true}"></p>
-            
-            </span>
-             
-     </li>
+    <div class="row">
+    <ng-container  *ngFor="let t of materiels ">
+       <div class="col-md-4">
+           <app-materiel [mat]="t"></app-materiel>
+       </div>
     </ng-container>
+</div>
 </ul>

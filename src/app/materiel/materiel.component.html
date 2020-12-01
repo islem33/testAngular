@@ -1,0 +1,21 @@
+<div *ngIf="materiel.quantite != 0">
+<div class="card">
+    <div class="card-header">
+    <p class="text-center">{{materiel.libelle}}</p>
+    </div>
+    <div class="card-body text-center">
+    <img src="{{materiel.photo}}" />
+    <p ><span [ngClass]="{'badge badge-primary ':materiel.hautGamme==true,
+        'badge badge-dark':materiel.hautGamme==false,
+        'badge-pill':materiel.hautGamme==true||materiel.hautGamme==false}"> 
+      Prix: {{materiel.prix}} DT 
+    <p [ngClass]="{' fa fa-thumbs-up de font-awesome':materiel.hautGamme==true}"></p>
+    
+    </span></p>
+    </div>
+    <div class="card-footer text-center">
+    <button  class="btn btn-primary  " >Details</button>
+    </div>
+   </div>  
+</div>
+
