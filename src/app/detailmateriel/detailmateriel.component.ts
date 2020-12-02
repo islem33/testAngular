@@ -22,9 +22,13 @@ export class DetailmaterielComponent implements OnInit {
 2020,10,4)}]
 };
 
+  
+
+
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }

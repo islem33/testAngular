@@ -1,1 +1,12 @@
-<p>detailmateriel works!</p>
+<div>
+<h5>Detail du "{{materiel.libelle}}" d'id : {{materiel.id}}</h5>
+<ul class="list-group">
+    <li class="list-group-item"><img src="{{materiel.photo}}"/></li>
+    <li class="list-group-item">marque:{{materiel.marque}}</li>
+    <li class="list-group-item">prix:{{materiel.prix}}</li>
+    <li class="list-group-item">description:{{materiel.description}}</li>
+    <li class="list-group-item">quantite:{{materiel.quantite}}</li>
+    <li class="list-group-item"> <input type="button" [checked]="materiel.hautGamme">hautGamme </li>
+    <li class="list-group-item"> <button class="btn btn-primary" >afficher les commentaires</button></li>
+</ul>
+</div>

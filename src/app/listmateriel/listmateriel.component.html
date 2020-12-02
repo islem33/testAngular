@@ -2,9 +2,11 @@
 <ul>
     <div class="row">
     <ng-container  *ngFor="let t of materiels ">
-       
-           <app-materiel [mat]="t"></app-materiel>
-    
+        <ng-container *ngIf="t.quantite > 0">
+          <div class="col-md-4">
+            <app-materiel [mat]="t"></app-materiel>
+          </div>
+        </ng-container>
     </ng-container>
 </div>
 </ul>
