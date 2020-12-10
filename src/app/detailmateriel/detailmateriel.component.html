@@ -1,12 +1,38 @@
-<div>
-<h5>Detail du "{{materiel.libelle}}" d'id : {{materiel.id}}</h5>
-<ul class="list-group">
-    <li class="list-group-item"><img src="{{materiel.photo}}"/></li>
-    <li class="list-group-item">marque:{{materiel.marque}}</li>
-    <li class="list-group-item">prix:{{materiel.prix}}</li>
-    <li class="list-group-item">description:{{materiel.description}}</li>
-    <li class="list-group-item">quantite:{{materiel.quantite}}</li>
-    <li class="list-group-item"> <input type="button" [checked]="materiel.hautGamme">hautGamme </li>
-    <li class="list-group-item"> <button class="btn btn-primary" >afficher les commentaires</button></li>
-</ul>
+<div class="container">
+    <div class="row">
+        <div class="col-6">
+            <h2>Détail du "{{materiel.libelle}}" d'Id : {{materiel.id}}</h2>
+            <ul class="list-group">
+                <li class="list-group-item">
+            <img [src]="materiel.photo" alt="photo">
+                </li>
+                <li class="list-group-item">
+                    Marque : {{materiel.marque}}
+                </li>
+                <li class="list-group-item">
+                    Prix {{materiel.prix}}
+                </li>
+                <li class="list-group-item">
+                    Description {{materiel.description}}
+                </li>
+                <li class="list-group-item">
+                    Quantité : {{materiel.quantite}}
+                </li>
+                <li class="list-group-item">
+                    <input type="checkbox" [checked]="materiel.hautGamme"> Haut de Gamme
+                </li>
+                <li class="list-group-item">
+                    <button type="button" class="btn btn-primary"
+                     (click)="onaffiche()">Afficher les commentaires</button>
+                </li>
+            </ul>
+            
+        </div>
+        <div class="col-6" *ngIf="test">
+            <h2>Liste des commentaires</h2>
+            <div *ngFor= "let c of materiel.commentaires; index as i">
+                <app-comment [mat]="c" [index]="i+1"></app-comment>
+            </div>
+        </div>
+    </div>
 </div>
