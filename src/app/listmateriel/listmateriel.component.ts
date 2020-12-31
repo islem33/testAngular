@@ -7,7 +7,7 @@ import{MaterielService}from'../services/materiel.service';
   styleUrls: ['./listmateriel.component.css']
 })
 export class ListmaterielComponent implements OnInit {
-  materiels=[];
+   materiels=[];
     
 
   constructor(private listemateriel:MaterielService) { }

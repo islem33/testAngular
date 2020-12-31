@@ -11,19 +11,8 @@ export class DetailmaterielComponent implements OnInit {
 test :boolean=false;
 
  onaffiche(){
-   this.test=true;
-   
-
-      
-      
-    
-    
+   this.test=true;   
 }
-
-
-  
-
-
   constructor(private listmateriel:MaterielService) { }
 
   ngOnInit(): void {
