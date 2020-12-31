@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
+import { Materiel } from '../models/materiel';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MaterielService {
-  materiels=[
+   private materiels:Materiel[]=[
     {   
         id: '1',
         libelle: 'Ecran',
@@ -68,7 +69,7 @@ getMateriel(){
    return this.materiels;
 }
 getMaterielById (id : string){
-return this.materiels.find((mat => mat.id==id))
+return <Materiel> this.materiels.find(mat => mat.id==id);
 }
 
   constructor() { }
