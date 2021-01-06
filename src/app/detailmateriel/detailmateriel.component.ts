@@ -18,7 +18,8 @@ test :boolean=false;
   constructor(private listmateriel:MaterielService , private activatedRoute:ActivatedRoute,private router:Router) { }
 
   ngOnInit(): void {
-    let id=this.activatedRoute.snapshot.params['is'];
+    
+    let id = this.activatedRoute.snapshot.params['is'];
     this.materiel=this.listmateriel.getMaterielById(id);
    
 
