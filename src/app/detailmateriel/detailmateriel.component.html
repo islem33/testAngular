@@ -34,6 +34,9 @@
             <div *ngFor= "let c of materiel.commentaires; index as i">
                 <app-comment [mat]="c" [index]="i+1"></app-comment>
             </div>
+            <div>
+                <app-addcomment [mat]="mat"></app-addcomment>
+            </div>
         </div>
     
     </div>

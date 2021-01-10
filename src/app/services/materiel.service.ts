@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Commentaire } from '../models/commentaire';
 import { Materiel } from '../models/materiel';
 
 @Injectable({
@@ -70,6 +71,10 @@ getMateriel(){
 }
 getMaterielById (id : string){
 return <Materiel> this.materiels.find(mat => mat.id==id);
+}
+ajouterCommentaire(materiel: Materiel, comm: Commentaire){
+    materiel.commentaires.push(comm);
+    
 }
 
   constructor() { }
